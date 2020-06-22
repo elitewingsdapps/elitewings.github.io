@@ -1,2 +1,2 @@
-Telegram Channel: https://t.me/elitewingsflightteam
-Telegram Group: https://t.me/elitewings
+Telegram Channel: https://t.me/lavas
+Telegram Group: https://t.me/LaVas
