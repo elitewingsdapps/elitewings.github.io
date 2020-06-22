@@ -18,7 +18,7 @@
 
 
     <!-- Title -->
-    <title>ELITEWINGS</title>
+    <title>LAVAS</title>
 
     <!-- Bootstrap css -->
     <link href="https://bullrun.live/Content/assets/plugins/bootstrap-4.1.3/css/bootstrap.min.css" rel="stylesheet" />
@@ -93,8 +93,8 @@
                 <div class="app-header header top-header navbar-collapse ">
                     <div class="container-fluid">
                         <div class="d-flex">
-                            <a class="header-brand" href="https://elitewings.github.io/Home-Dashboard">
-                                <h3 style="margin-top: 16px;color: #141670;">ELITEWINGS</h3>
+                            <a class="header-brand" href="https://laVasv1.github.io/Home-Dashboard">
+                                <h3 style="margin-top: 16px;color: #141670;">LAVAS</h3>
                                 
                                
                             </a>
@@ -113,11 +113,11 @@
                         <div class="line-animations">
                             <ul class="resp-tabs-list hor_1">
                                 
-                                 <li class="resp-tab-active active"><a href="https://elitewings.github.io/Home-Dashboard"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/homepage.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Home"></a></li>
-                                <li class="autopool"><a href="https://elitewings.github.io/Autopool"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m2.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Autopool"></a></li>
-                                <li class="trans"><a href="https://elitewings.github.io/Transaction"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m3.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Transations"></a></li>
-                                <li class="team2"><a href="https://elitewings.github.io/Team"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m4.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Team"></a></li>
-                                <li class="media2"><a href="https://elitewings.github.io/Media"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m5.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Media"></a></li>
+                                 <li class="resp-tab-active active"><a href="https://laVasv1.github.io/Home-Dashboard"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/homepage.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Home"></a></li>
+                                <li class="autopool"><a href="https://laVasv1.github.io/Autopool"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m2.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Autopool"></a></li>
+                                <li class="trans"><a href="https://laVasv1.github.io/Transaction"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m3.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Transations"></a></li>
+                                <li class="team2"><a href="https://laVasv1.github.io/Team"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m4.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Team"></a></li>
+                                <li class="media2"><a href="https://laVasv1.github.io/Media"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m5.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Media"></a></li>
                              
                                 <li class="logoutuser"><span class="side-menu__icon"></span><img src="https://bullrun.live/Content/assets/img/m6.png" class="side_menu_img svg-1" alt="image" data-toggle="tooltip"  data-original-title="Log out"></li>
                           
@@ -134,19 +134,19 @@
 <script> 
 myContractInstance.methods.users(account).call().then(function (result1) {
         
-    $('.currentuseridlink').html("https://elitewings.run/signup/?referralid=" + result1.id);
+    $('.currentuseridlink').html("https://lavas.live/signup/?referralid=" + result1.id);
 
-    $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
-
-
-
-    $('.currentuseridlink').val("https://elitewings.run/signup/?referralid=" + result1.id);
-
-    $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
+    $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
 
 
 
-    $('.sharebutton').attr('data-url', "https://elitewings.run/signup/?referralid=" + result1.id);
+    $('.currentuseridlink').val("https://lavas.live/signup/?referralid=" + result1.id);
+
+    $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
+
+
+
+    $('.sharebutton').attr('data-url', "https://lavas.live/signup/?referralid=" + result1.id);
     $('.currentuserid').html(result1.id);
     $('.currentaddress').html(account);
     $('.ethaddress').attr('href', 'https://etherscan.io/address/' + account);
@@ -239,19 +239,19 @@ function getVariableData() {
 
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-            $('.currentuseridlink').html("https://elitewings.run/signup/?referralid=" + result1.id);
+            $('.currentuseridlink').html("https://lavas.live/signup/?referralid=" + result1.id);
 
-            $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
-
-
-
-            $('.currentuseridlink').val("https://elitewings.run/signup/?referralid=" + result1.id);
-
-            $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
+            $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
 
 
 
-            $('.sharebutton').attr('data-url', "https://elitewings.run/signup/?referralid=" + result1.id);
+            $('.currentuseridlink').val("https://lavas.live/signup/?referralid=" + result1.id);
+
+            $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
+
+
+
+            $('.sharebutton').attr('data-url', "https://lavas.live/signup/?referralid=" + result1.id);
             $('.currentuserid').html(result1.id);
             $('.currentaddress').html(account);
             $('.ethaddress').attr('href', 'https://etherscan.io/address/' + account);
@@ -277,19 +277,19 @@ function getVariableData() {
     DirectreferralCount();
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-        $('.currentuseridlink').html("https://elitewings.run/signup/?referralid=" + result1.id);
+        $('.currentuseridlink').html("https://lavas.live/signup/?referralid=" + result1.id);
     
-        $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
-    
-    
-    
-        $('.currentuseridlink').val("https://elitewings.run/signup/?referralid=" + result1.id);
-    
-        $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://elitewings.run/signup/?referralid=" + result1.id);
+        $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
     
     
     
-        $('.sharebutton').attr('data-url', "https://elitewings.run/signup/?referralid=" + result1.id);
+        $('.currentuseridlink').val("https://lavas.live/signup/?referralid=" + result1.id);
+    
+        $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
+    
+    
+    
+        $('.sharebutton').attr('data-url', "https://lavas.live/signup/?referralid=" + result1.id);
         $('.currentuserid').html(result1.id);
         $('.currentaddress').html(account);
         $('.ethaddress').attr('href', 'https://etherscan.io/address/' + account);
@@ -1000,7 +1000,7 @@ $(document).ready(function () {
         try {
 
             ethereum.enable();
-            myContractInstance1.methods.buyPool1().send({ from: account, value: 200000000000000000, gas: 500000 })
+            myContractInstance1.methods.buyPool1().send({ from: account, value: 250000000000000000, gas: 500000 })
                 .on('transactionHash', function (hash) {
                 
                     $('.pool1pay').hide();
@@ -1038,7 +1038,7 @@ $(document).ready(function () {
         try {
             ethereum.enable();
 
-            myContractInstance1.methods.buyPool3().send({ from: account, value: 700000000000000000, gas: 500000 })
+            myContractInstance1.methods.buyPool3().send({ from: account, value: 750000000000000000, gas: 500000 })
                 .on('transactionHash', function (hash) {
 
                     $('.pool3pay').hide();
@@ -1056,7 +1056,7 @@ $(document).ready(function () {
         try {
             ethereum.enable();
             
-            myContractInstance1.methods.buyPool4().send({ from: account, value: 1000000000000000000, gas: 500000 })
+            myContractInstance1.methods.buyPool4().send({ from: account, value: 1250000000000000000, gas: 500000 })
                 .on('transactionHash', function (hash) {
 
                     $('.pool4pay').hide();
@@ -1093,7 +1093,7 @@ $(document).ready(function () {
         try {
             ethereum.enable();
 
-            myContractInstance1.methods.buyPool6().send({ from: account, value: 3000000000000000000, gas: 500000 })
+            myContractInstance1.methods.buyPool6().send({ from: account, value: 3500000000000000000, gas: 500000 })
                 .on('transactionHash', function (hash) {
 
                     $('.pool6pay').hide();
@@ -1643,7 +1643,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">0.25 ETH</h1>
-                        <p class="mb-5">Globally <strong>2</strong> people pays <br /> <strong>0.225</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays <br /> <strong>0.25</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-primary pool1pay">Enter</button>
                         <p class="pool1transaction btn btn-primary disabled">Not Eligible</p>
@@ -1661,7 +1661,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">0.5 ETH</h1>
-                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>0.45</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>0.5</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-danger pool2pay">Enter</button>
                         <p class="pool2transaction btn btn-primary disabled">Not Eligible</p>
@@ -1679,7 +1679,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">0.75 ETH</h1>
-                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>0.675</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>0.75</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool3pay">Enter</button>
                         <p class="pool3transaction btn btn-primary disabled">Not Eligible</p>
@@ -1698,7 +1698,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">1.25 ETH</h1>
-                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>1.125</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>1.25</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool4pay">Enter</button>
                         <p class="pool4transaction btn btn-primary disabled">Not Eligible</p>
@@ -1717,7 +1717,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">2 ETH</h1>
-                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>1.8</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>2</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool5pay">Enter</button>
                         <p class="pool5transaction btn btn-primary disabled">Not Eligible</p>
@@ -1736,7 +1736,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">3.50 ETH</h1>
-                        <p class="mb-5">Globally <strong>1.15</strong> people pays  <br /><strong>3.15</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>2</strong> people pays  <br /><strong>3.5</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool6pay">Enter</button>
                         <p class="pool6transaction btn btn-primary disabled">Not Eligible</p>
@@ -1755,7 +1755,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">6 ETH</h1>
-                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>5.4</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>6</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool7pay">Enter</button>
                         <p class="pool7transaction btn btn-primary disabled">Not Eligible</p>
@@ -1774,7 +1774,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">10 ETH</h1>
-                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>9</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>10</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool8pay">Enter</button>
                         <p class="pool8transaction btn btn-primary disabled">Not Eligible</p>
@@ -1793,7 +1793,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">15 ETH</h1>
-                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>13.5</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>15</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool9pay">Enter</button>
                         <p class="pool9transaction btn btn-primary disabled">Not Eligible</p>
@@ -1812,7 +1812,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">20 ETH</h1>
-                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>18</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>3</strong> people pays  <br /><strong>20</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool10pay">Enter</button>
                         <p class="pool10transaction btn btn-primary disabled">Not Eligible</p>
@@ -1830,7 +1830,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">30 ETH</h1>
-                        <p class="mb-5">Globally <strong>4</strong> people pays  <br /><strong>27</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>4</strong> people pays  <br /><strong>30</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool11pay">Enter</button>
                         <p class="pool11transaction btn btn-primary disabled">Not Eligible</p>
@@ -1848,7 +1848,7 @@ $(document).ready(function () {
                     </div>
                     <div class="card-body">
                         <h1 class="pricing-card-title mb-5">50 ETH</h1>
-                        <p class="mb-5">Globally <strong>5</strong> people pays  <br /><strong>45</strong> ETH each</p>
+                        <p class="mb-5">Globally <strong>5</strong> people pays  <br /><strong>50</strong> ETH each</p>
                         <p class="mb-5">No Referral necessary</p>
                         <button type="button" class="btn btn-success pool12pay">Enter</button>
                         <p class="pool12transaction btn btn-primary disabled">Not Eligible</p>
@@ -1878,12 +1878,12 @@ $(document).ready(function () {
         <footer class="footer-main leftmenu-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6  mt-2 mb-2 p-l-10">
+                   <!-- <div class="col-md-6  mt-2 mb-2 p-l-10">
                         <span class="p-r-10">Contract address</span>
                         <a href="https://etherscan.io/address/0xeae40ba575e20339a54c9da1589879640484bc2c" class="text-success" target="_blank">
                             0xeae40ba575e20339a54c9da1589879640484bc2c <i class="fa fa-external-link"></i>
                         </a>
-                    </div> 
+                    </div> -->
                     <div class="col-md-6  mt-2 mb-2 text-center">
 
                     </div>
