@@ -215,18 +215,6 @@ function getVariableData() {
             $('.Pool10count').html(result);     
         $('.pool10_current_address').html("<a href=https://etherscan.io/address/" + result + " target=_blank>" + result + "</a>");
     });
-  
-  myContractInstance.methods.pool11currUserID().call().then(function (result) {
-        
-            $('.Pool11count').html(result);     
-        $('.pool11_current_address').html("<a href=https://etherscan.io/address/" + result + " target=_blank>" + result + "</a>");
-    });
-  
-  myContractInstance.methods.pool12currUserID().call().then(function (result) {
-        
-            $('.Pool12count').html(result);     
-        $('.pool12_current_address').html("<a href=https://etherscan.io/address/" + result + " target=_blank>" + result + "</a>");
-    });
 
 
 
@@ -352,8 +340,6 @@ function getPoolPaymentReceived() {
     var pool8_price = 10;
     var pool9_price = 15;
     var pool10_price = 20;
-   var pool11_price = 30;
-   var pool12_price = 50;
 
     var referraltotal = parseFloat(0);
 
@@ -393,12 +379,6 @@ function getPoolPaymentReceived() {
                 else if (level == 10) {
                     referraltotal = parseFloat(referraltotal) + pool10_price;
                 }
-              else if (level == 11) {
-                    referraltotal = parseFloat(referraltotal) + pool11_price;
-                }
-              else if (level == 12) {
-                    referraltotal = parseFloat(referraltotal) + pool12_price;
-                }
 
 
                 $('.totalpoolpayment').html(Math.round(1000000 * (referraltotal)) / 1000000);
@@ -415,7 +395,7 @@ var employees = {
     accounting: []
 };
 var str = "";
-//'0xeae40ba575e20339a54c9da1589879640484bc2c'
+//'0xeAe40BA575E20339A54C9dA1589879640484BC2c'
 function Directreferral() {
     
     var events = myContractInstance.getPastEvents('regLevelEvent', {filter:{ _referrer: account }, 'fromBlock': 0, 'toBlock': 'latest'}, function (error, log) {
@@ -558,12 +538,10 @@ function Transaction_Pool() {
     var pool8_price = 10;
     var pool9_price = 15;
     var pool10_price = 20;
-   var pool11_price = 30;
-   var pool12_price = 50;
 
         if (!error) {
             $.each(log, function (key, value) {
-                $('.transaction_autopool').append('<tr><td><a href="https://etherscan.io/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._user + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? pool1_price : value.returnValues._level == 2 ? pool2_price : value.returnValues._level == 3 ? pool3_price : value.returnValues._level == 4 ? pool4_price : value.returnValues._level == 5 ? pool5_price : value.returnValues._level == 6 ? pool6_price : value.returnValues._level == 7 ? pool7_price : value.returnValues._level == 8 ? pool8_price : value.returnValues._level == 9 ? pool9_price : value.returnValues._level == 10 ? pool10_price : value.returnValues._level == 11 ? pool11_price : pool12_price) + ' ETH</td></tr>');
+                $('.transaction_autopool').append('<tr><td><a href="https://etherscan.io/tx/' + value.transactionHash + '" target="_blank">' + value.transactionHash + '</a></td><td style=color:green>' + value.returnValues._user + '</td><td>' + value.returnValues._level + '</td><td>' + (value.returnValues._level == 1 ? pool1_price : value.returnValues._level == 2 ? pool2_price : value.returnValues._level == 3 ? pool3_price : value.returnValues._level == 4 ? pool4_price : value.returnValues._level == 5 ? pool5_price : value.returnValues._level == 6 ? pool6_price : value.returnValues._level == 7 ? pool7_price : value.returnValues._level == 8 ? pool8_price : value.returnValues._level == 9 ? pool9_price : pool10_price) + ' ETH</td></tr>');
             });
         }
     });
@@ -571,14 +549,12 @@ function Transaction_Pool() {
 </script>
        
 
-       
-
 <script>
 var myContractInstance, myContractInstance1;
 var account = localStorage.getItem("address");
 
 var abi = [{"constant":false,"inputs":[],"name":"buyPool1","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool5currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool5users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool3userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool1userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool8userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool1activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool1users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool4","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool5activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool9currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool4userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool2activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool7","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool9userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool1currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool4activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool9users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool2","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool7currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool10currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool6users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool8","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getEthBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool3users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"LEVEL_PRICE","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"unlimited_level_price","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool2userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool8activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool4users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool6userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"requests","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"referrerID","type":"uint256"},{"internalType":"uint256","name":"referredUsers","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool2users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool8currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool7users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool9activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"_referrerID","type":"uint256"}],"name":"regUser","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"ownerWallet","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool7activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool10activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool4currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool8users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool9","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"referrerID","type":"uint256"},{"internalType":"uint256","name":"referredUsers","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool6","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool2currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool3","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool3currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool5userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool7userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"pool10userList","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pool3activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool10","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool6currUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"pool10users","outputs":[{"internalType":"bool","name":"isExist","type":"bool"},{"internalType":"uint256","name":"id","type":"uint256"},{"internalType":"uint256","name":"payment_received","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"buyPool5","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"pool6activeUserID","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_user","type":"address"},{"indexed":true,"internalType":"address","name":"_referrer","type":"address"},{"indexed":false,"internalType":"uint256","name":"_time","type":"uint256"}],"name":"regLevelEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_user","type":"address"},{"indexed":true,"internalType":"address","name":"_referral","type":"address"},{"indexed":false,"internalType":"uint256","name":"_level","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_time","type":"uint256"}],"name":"getMoneyForLevelEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_user","type":"address"},{"indexed":false,"internalType":"uint256","name":"_level","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_time","type":"uint256"}],"name":"regPoolEntry","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"_user","type":"address"},{"indexed":true,"internalType":"address","name":"_receiver","type":"address"},{"indexed":false,"internalType":"uint256","name":"_level","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"_time","type":"uint256"}],"name":"getPoolPayment","type":"event"}];
-var address = "0xeae40ba575e20339a54c9da1589879640484bc2c";
+var address = "0xeAe40BA575E20339A54C9dA1589879640484BC2c";
 var MyContract;
 window.addEventListener('load', function () {
     if (typeof web3 !== 'undefined') {
@@ -642,8 +618,6 @@ function checkbuyLevel() {
                 checkPool8();
                 checkPool9();
                 checkPool10();
-               checkPool11();
-               checkPool12();
             }
        
 
@@ -941,62 +915,6 @@ function checkPool10() {
     });
 
 }
-  
-  function checkPool11() {
-    myContractInstance.methods.pool10users(account).call().then(function (result) {
-       
-            if (!result[0]) {
-                $('.pool11pay').show();
-                $('.pool11transaction').hide();
-            }
-            else if (result[2] == 3) {
-                $('.pool11status').show();
-                $('.pool11status .card-status').addClass('bg-success');
-                $('.pool11status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool11transaction').html('Received No. of Payments ' + result[2]);
-                $('.currentautopoolno').html(11);
-            }
-            else if (result[2] < 3) {
-                $('.pool11status').show();
-                $('.pool11status .card-status').addClass('bg-warning');
-                $('.pool11status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool11transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(11);
-            }
-
-
-       
-
-    });
-
-}
-  
-  function checkPool12() {
-    myContractInstance.methods.pool10users(account).call().then(function (result) {
-       
-            if (!result[0]) {
-                $('.pool12pay').show();
-                $('.pool12transaction').hide();
-            }
-            else if (result[2] == 3) {
-                $('.pool12status').show();
-                $('.pool12status .card-status').addClass('bg-success');
-                $('.pool12status .ribbon').addClass('text-success').html('<span class="bg-success">Completed</span>');
-                $('.pool12transaction').html('Received No. of Payments ' + result[2]);
-                $('.currentautopoolno').html(12);
-            }
-            else if (result[2] < 3) {
-                $('.pool12status').show();
-                $('.pool12status .card-status').addClass('bg-warning');
-                $('.pool12status .ribbon').addClass('text-warning').html('<span class="bg-warning">Active</span>');
-                $('.pool12transaction').html('Received No. of Payments ' + result[2]); $('.currentautopoolno').html(12);
-            }
-
-
-       
-
-    });
-
-}
 $(document).ready(function () {
     $('.pool1pay').click(function () {
         try {
@@ -1180,41 +1098,6 @@ $(document).ready(function () {
                     $('.pool10pay').hide();
                     $('.pool10transaction').show();
                     $('.pool10transaction').html('<a href="https://etherscan.io/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-  
-  $('.pool11pay').click(function () {
-        try {
-            ethereum.enable();
-           
-            myContractInstance1.methods.buyPool10().send({ from: account, value: 30000000000000000000, gas: 500000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool11pay').hide();
-                    $('.pool11transaction').show();
-                    $('.pool11transaction').html('<a href="https://etherscan.io/tx/' + hash + '">Track</a>');
-
-                });
-        }
-        catch (err) {
-            alert('Please download and install Metamask and Loggin to account');
-        }
-    });
-  $('.pool12pay').click(function () {
-        try {
-            ethereum.enable();
-           
-            myContractInstance1.methods.buyPool10().send({ from: account, value: 50000000000000000000, gas: 500000 })
-                .on('transactionHash', function (hash) {
-
-                    $('.pool12pay').hide();
-                    $('.pool12transaction').show();
-                    $('.pool12transaction').html('<a href="https://etherscan.io/tx/' + hash + '">Track</a>');
 
                 });
         }
@@ -1490,36 +1373,7 @@ $(document).ready(function () {
                                     </div>
                                 </div>
                             </li>
- <li>
-                                <div>
-                                    <div class="row">
-                                        <div class="d-flex">
-                                            <div class="">
-                                                <img src="#" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Pool 11 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool11count"></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                           <li>
-                                <div>
-                                    <div class="row">
-                                        <div class="d-flex">
-                                            <div class="">
-                                                <img src="#" class="w-7 h-7" alt="">
-                                            </div>
-                                            <div class="ml-3">
-                                                <p class="text-white mb-1 fs-12">Pool 12 Users</p>
-                                                <div class="h5 m-0 fs-14 text-warning"><span class="Pool12count"></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -1632,6 +1486,7 @@ $(document).ready(function () {
             
         </div>
         <!-- row closed -->
+          <!-- row closed -->
         <!-- row opened -->
         <div class="row ">
             <div class="col-md-3 col-xs-6">
@@ -1864,12 +1719,13 @@ $(document).ready(function () {
 </div>
 
 
+
 <style>
-    .pool1pay, .pool2pay, .pool3pay, .pool4pay, .pool5pay, .pool6pay, .pool7pay, .pool8pay, .pool9pay, .pool10pay, .pool11pay, .pool12pay {
+    .pool1pay, .pool2pay, .pool3pay, .pool4pay, .pool5pay, .pool6pay, .pool7pay, .pool8pay, .pool9pay, .pool10pay {
         display: none
     }
 
-    .pool1status, .pool2status, .pool3status, .pool4status, .pool5status, .pool6status, .pool7status, .pool8status, .pool9status, .pool10status, .pool11status, .pool12status {
+    .pool1status, .pool2status, .pool3status, .pool4status, .pool5status, .pool6status, .pool7status, .pool8status, .pool9status, .pool10status {
         display: none
     }
 </style>
@@ -1880,10 +1736,10 @@ $(document).ready(function () {
         <footer class="footer-main leftmenu-footer">
             <div class="container">
                 <div class="row">
-                   <!-- <div class="col-md-6  mt-2 mb-2 p-l-10">
+                  <!--  <div class="col-md-6  mt-2 mb-2 p-l-10">
                         <span class="p-r-10">Contract address</span>
-                        <a href="https://etherscan.io/address/0xeae40ba575e20339a54c9da1589879640484bc2c" class="text-success" target="_blank">
-                            0xeae40ba575e20339a54c9da1589879640484bc2c <i class="fa fa-external-link"></i>
+                        <a href="https://etherscan.io/address/0xeAe40BA575E20339A54C9dA1589879640484BC2c" class="text-success" target="_blank">
+                            0xeAe40BA575E20339A54C9dA1589879640484BC2c <i class="fa fa-external-link"></i>
                         </a>
                     </div> -->
                     <div class="col-md-6  mt-2 mb-2 text-center">
