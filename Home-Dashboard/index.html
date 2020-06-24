@@ -352,6 +352,8 @@ function getPoolPaymentReceived() {
     var pool8_price = 20;
     var pool9_price = 50;
     var pool10_price = 100;
+  var pool11_price = 100;
+  var pool12_price = 100;
 
     var referraltotal = parseFloat(0);
 
@@ -390,6 +392,12 @@ function getPoolPaymentReceived() {
                 }
                 else if (level == 10) {
                     referraltotal = parseFloat(referraltotal) + pool10_price;
+                }
+               else if (level == 11) {
+                    referraltotal = parseFloat(referraltotal) + pool11_price;
+                }
+               else if (level == 12) {
+                    referraltotal = parseFloat(referraltotal) + pool12_price;
                 }
 
 
