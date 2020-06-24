@@ -231,7 +231,7 @@ function getVariableData() {
 
 
 
-    myContractInstance.methods.currUserID().call().then(function (result) {
+  myContractInstance.methods.currUserID().call().then(function (result) {
     
        
             $('.TotalUsers').html(result);
@@ -240,19 +240,19 @@ function getVariableData() {
 
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-            $('.currentuseridlink').html("https://fastbullv1.network/signup/?referralid=" + result1.id);
+            $('.currentuseridlink').html("https://lavas.live/signup/?referralid=" + result1.id);
 
-            $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://fastbullv1.network/signup/?referralid=" + result1.id);
-
-
-
-            $('.currentuseridlink').val("https://fastbullv1.network/signup/?referralid=" + result1.id);
-
-            $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://fastbullv1.network/signup/?referralid=" + result1.id);
+            $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
 
 
 
-            $('.sharebutton').attr('data-url', "https://fastbullv1.network/signup/?referralid=" + result1.id);
+            $('.currentuseridlink').val("https://lavas.live/signup/?referralid=" + result1.id);
+
+            $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
+
+
+
+            $('.sharebutton').attr('data-url', "https://lavas.live/signup/?referralid=" + result1.id);
             $('.currentuserid').html(result1.id);
             $('.currentaddress').html(account);
             $('.ethaddress').attr('href', 'https://etherscan.io/address/' + account);
@@ -278,19 +278,19 @@ function getVariableData() {
     DirectreferralCount();
     myContractInstance.methods.users(account).call().then(function (result1) {
         
-        $('.currentuseridlink').html("https://fastbullv1.network/signup/?referralid=" + result1.id);
+        $('.currentuseridlink').html("https://lavas.live/signup/?referralid=" + result1.id);
     
-        $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://fastbullv1.network/signup/?referralid=" + result1.id);
-    
-    
-    
-        $('.currentuseridlink').val("https://fastbullv1.network/signup/?referralid=" + result1.id);
-    
-        $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://fastbullv1.network/signup/?referralid=" + result1.id);
+        $('.currentuseridlinknew').html("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
     
     
     
-        $('.sharebutton').attr('data-url', "https://fastbullv1.network/signup/?referralid=" + result1.id);
+        $('.currentuseridlink').val("https://lavas.live/signup/?referralid=" + result1.id);
+    
+        $('.currentuseridlinknew').val("https://link.trustwallet.com/open_url?coin_id=60&url=https://lavas.live/signup/?referralid=" + result1.id);
+    
+    
+    
+        $('.sharebutton').attr('data-url', "https://lavas.live/signup/?referralid=" + result1.id);
         $('.currentuserid').html(result1.id);
         $('.currentaddress').html(account);
         $('.ethaddress').attr('href', 'https://etherscan.io/address/' + account);
@@ -343,16 +343,18 @@ function getReferralCommission() {
 
 
 function getPoolPaymentReceived() {
-    var pool1_price = 0.1;
-    var pool2_price = 0.2;
-    var pool3_price = 0.5;
-    var pool4_price = 1;
+    var pool1_price = 0.25;
+    var pool2_price = 0.5;
+    var pool3_price = 0.75;
+    var pool4_price = 1.25;
     var pool5_price = 2;
-    var pool6_price = 5;
-    var pool7_price = 10;
-    var pool8_price = 20;
-    var pool9_price = 50;
-    var pool10_price = 100;
+    var pool6_price = 3.5;
+    var pool7_price = 6;
+    var pool8_price = 10;
+    var pool9_price = 15;
+    var pool10_price = 20;
+   var pool11_price = 30;
+   var pool12_price = 50;
 
     var referraltotal = parseFloat(0);
 
@@ -391,6 +393,12 @@ function getPoolPaymentReceived() {
                 }
                 else if (level == 10) {
                     referraltotal = parseFloat(referraltotal) + pool10_price;
+                }
+              else if (level == 11) {
+                    referraltotal = parseFloat(referraltotal) + pool11_price;
+                }
+              else if (level == 12) {
+                    referraltotal = parseFloat(referraltotal) + pool12_price;
                 }
 
 
